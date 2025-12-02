@@ -1,0 +1,1429 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Psychotherapie Bastine – Privatpraxis für Psychotherapie</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Privatpraxis für Psychotherapie und Klinische Neuropsychologie – Diplom-Psychologin Bastine, psychologische Psychotherapeutin (tiefenpsychologisch fundiert) mit über 40 Jahren Berufserfahrung."
+    />
+    <style>
+      :root {
+        --bg: #f7f4f1;
+        --bg-light: #fffdfb;
+        --primary: #8c5c45;
+        --primary-soft: #b98a6e;
+        --accent: #d6b79e;
+        --text: #2d2420;
+        --muted: #6b5b53;
+        --border: #e2d6cc;
+        --radius-lg: 18px;
+        --radius-xl: 26px;
+        --shadow-soft: 0 18px 40px rgba(0, 0, 0, 0.06);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          sans-serif;
+        background: radial-gradient(
+          circle at top left,
+          #fdf6ee,
+          #f5f2ef 40%,
+          #efe7e0
+        );
+        color: var(--text);
+        line-height: 1.6;
+        scroll-behavior: smooth;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      img {
+        max-width: 100%;
+        display: block;
+      }
+
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        backdrop-filter: blur(16px);
+        background: linear-gradient(
+          to bottom,
+          rgba(247, 244, 241, 0.96),
+          rgba(247, 244, 241, 0.92)
+        );
+        border-bottom: 1px solid rgba(210, 195, 184, 0.6);
+      }
+
+      .nav {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0.8rem 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+      }
+
+      .logo-mark {
+        width: 40px;
+        height: 40px;
+        border-radius: 999px;
+        background: radial-gradient(circle at 30% 30%, #fdf7f3, #c58f70);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 600;
+        font-size: 1.1rem;
+        color: #fff7f0;
+        box-shadow: 0 10px 25px rgba(139, 92, 73, 0.35);
+      }
+
+      .logo-text-main {
+        font-size: 1.05rem;
+        font-weight: 600;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+      }
+
+      .logo-text-sub {
+        font-size: 0.78rem;
+        color: var(--muted);
+      }
+
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 1.8rem;
+        font-size: 0.95rem;
+      }
+
+      .nav-links a {
+        position: relative;
+        padding-bottom: 0.15rem;
+      }
+
+      .nav-links a::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -2px;
+        width: 0;
+        height: 2px;
+        background: linear-gradient(90deg, var(--primary), var(--accent));
+        border-radius: 999px;
+        transition: width 0.2s ease-out;
+      }
+
+      .nav-links a:hover::after,
+      .nav-links a:focus-visible::after {
+        width: 100%;
+      }
+
+      .nav-button {
+        padding: 0.55rem 1.25rem;
+        border-radius: 999px;
+        border: none;
+        cursor: pointer;
+        background: linear-gradient(
+          135deg,
+          var(--primary),
+          var(--primary-soft)
+        );
+        color: #fdf7f2;
+        font-size: 0.9rem;
+        font-weight: 600;
+        box-shadow: 0 12px 25px rgba(94, 54, 38, 0.3);
+        transition: transform 0.12s ease-out, box-shadow 0.12s ease-out,
+          filter 0.12s ease-out;
+        white-space: nowrap;
+      }
+
+      .nav-button:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 16px 35px rgba(94, 54, 38, 0.35);
+        filter: brightness(1.03);
+      }
+
+      .nav-button:active {
+        transform: translateY(0);
+        box-shadow: 0 10px 20px rgba(94, 54, 38, 0.3);
+      }
+
+      .nav-toggle {
+        display: none;
+        background: none;
+        border: none;
+        padding: 0.25rem;
+        cursor: pointer;
+      }
+
+      .nav-toggle span {
+        display: block;
+        width: 22px;
+        height: 2px;
+        border-radius: 999px;
+        background: var(--text);
+        margin: 4px 0;
+        transition: transform 0.2s ease, opacity 0.2s ease;
+      }
+
+      .nav-toggle.active span:nth-child(1) {
+        transform: translateY(6px) rotate(45deg);
+      }
+
+      .nav-toggle.active span:nth-child(2) {
+        opacity: 0;
+      }
+
+      .nav-toggle.active span:nth-child(3) {
+        transform: translateY(-6px) rotate(-45deg);
+      }
+
+      main {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 1.25rem 1.5rem 3.5rem;
+      }
+
+      /* Hero */
+
+      .hero {
+        display: grid;
+        grid-template-columns: minmax(0, 1.6fr) minmax(0, 1.1fr);
+        gap: 2.5rem;
+        align-items: center;
+        padding: 2.75rem 1.15rem 2.5rem;
+      }
+
+      .hero-left {
+        padding-right: 1rem;
+      }
+
+      .hero-overline {
+        text-transform: uppercase;
+        font-size: 0.75rem;
+        letter-spacing: 0.14em;
+        color: var(--muted);
+        margin-bottom: 0.75rem;
+      }
+
+      .hero h1 {
+        font-size: clamp(2.1rem, 3vw, 2.6rem);
+        margin: 0 0 0.75rem;
+        letter-spacing: 0.03em;
+      }
+
+      .hero h1 span {
+        color: var(--primary);
+      }
+
+      .hero-subtitle {
+        font-size: 1rem;
+        color: var(--muted);
+        margin-bottom: 1.5rem;
+      }
+
+      .hero-badge-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.6rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .badge {
+        font-size: 0.78rem;
+        padding: 0.3rem 0.7rem;
+        border-radius: 999px;
+        border: 1px solid rgba(190, 160, 140, 0.7);
+        background: rgba(255, 252, 248, 0.8);
+        color: var(--muted);
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
+        white-space: nowrap;
+      }
+
+      .badge-dot {
+        width: 6px;
+        height: 6px;
+        border-radius: 999px;
+        background: var(--primary);
+      }
+
+      .hero-text {
+        font-size: 0.98rem;
+        margin-bottom: 1.7rem;
+      }
+
+      .hero-cta-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.9rem;
+        align-items: center;
+      }
+
+      .btn-primary {
+        padding: 0.75rem 1.5rem;
+        border-radius: 999px;
+        border: none;
+        cursor: pointer;
+        background: linear-gradient(
+          135deg,
+          var(--primary),
+          var(--primary-soft)
+        );
+        color: #fff7f1;
+        font-weight: 600;
+        font-size: 0.95rem;
+        box-shadow: 0 18px 38px rgba(105, 64, 44, 0.36);
+        transition: transform 0.12s ease-out, box-shadow 0.12s ease-out,
+          filter 0.12s ease-out;
+      }
+
+      .btn-primary:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 22px 45px rgba(105, 64, 44, 0.4);
+        filter: brightness(1.03);
+      }
+
+      .btn-secondary-link {
+        border-radius: 999px;
+        border: 1px solid rgba(175, 147, 127, 0.9);
+        padding: 0.7rem 1.2rem;
+        font-size: 0.92rem;
+        color: var(--muted);
+        background: rgba(253, 248, 243, 0.75);
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .btn-secondary-link span.icon {
+        font-size: 1.1rem;
+        transform: translateY(1px);
+      }
+
+      .hero-note {
+        margin-top: 0.9rem;
+        font-size: 0.8rem;
+        color: var(--muted);
+      }
+
+      .hero-card {
+        background: radial-gradient(circle at top, #fff9f5, #f0e4da);
+        border-radius: 32px;
+        padding: 2.1rem 2rem 1.9rem;
+        box-shadow: var(--shadow-soft);
+        border: 1px solid rgba(204, 183, 168, 0.7);
+        display: flex;
+        flex-direction: column;
+        gap: 1.3rem;
+      }
+
+      .hero-card-header {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      .profile-avatar {
+        width: 70px;
+        height: 70px;
+        border-radius: 999px;
+        background: linear-gradient(135deg, #fdf7f2, #c68f70);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.4rem;
+        font-weight: 600;
+        color: #fdf4ea;
+        box-shadow: 0 18px 35px rgba(125, 81, 57, 0.5);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .profile-avatar::after {
+        content: "";
+        position: absolute;
+        inset: 8px;
+        border-radius: inherit;
+        border: 1px solid rgba(255, 255, 255, 0.45);
+      }
+
+      .hero-card-name {
+        font-weight: 600;
+        font-size: 1.05rem;
+        margin-bottom: 0.1rem;
+      }
+
+      .hero-card-role {
+        font-size: 0.86rem;
+        color: var(--muted);
+      }
+
+      .hero-card-exp {
+        font-size: 0.85rem;
+        padding: 0.35rem 0.7rem;
+        border-radius: 999px;
+        border: 1px solid rgba(161, 124, 101, 0.6);
+        background: rgba(255, 252, 247, 0.8);
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
+        color: #5b4333;
+      }
+
+      .hero-card-text {
+        font-size: 0.9rem;
+        color: #4a3b34;
+      }
+
+      .hero-card-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        font-size: 0.88rem;
+        display: grid;
+        row-gap: 0.3rem;
+      }
+
+      .hero-card-list li::before {
+        content: "•";
+        margin-right: 0.4rem;
+        color: var(--primary);
+      }
+
+      .hero-card-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 0.75rem;
+        flex-wrap: wrap;
+        font-size: 0.8rem;
+        color: var(--muted);
+      }
+
+      .hero-card-status-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 999px;
+        background: #1c9b71;
+        box-shadow: 0 0 0 5px rgba(28, 155, 113, 0.18);
+        margin-right: 0.4rem;
+      }
+
+      .hero-card-contact {
+        font-size: 0.85rem;
+      }
+
+      .hero-card-contact strong {
+        font-weight: 600;
+      }
+
+      /* Sections */
+
+      section {
+        margin-top: 2.5rem;
+        padding: 1.4rem 1.15rem;
+        border-radius: var(--radius-xl);
+        background: rgba(255, 252, 249, 0.78);
+        border: 1px solid rgba(223, 205, 191, 0.9);
+        box-shadow: var(--shadow-soft);
+      }
+
+      section + section {
+        margin-top: 1.9rem;
+      }
+
+      .section-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: 1rem;
+        margin-bottom: 1.1rem;
+      }
+
+      .section-title {
+        font-size: 1.25rem;
+        margin: 0;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+      }
+
+      .section-kicker {
+        font-size: 0.85rem;
+        color: var(--muted);
+      }
+
+      .two-col {
+        display: grid;
+        grid-template-columns: minmax(0, 1.6fr) minmax(0, 1.4fr);
+        gap: 2rem;
+      }
+
+      .section-text p {
+        margin-top: 0;
+        font-size: 0.96rem;
+      }
+
+      .pill-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+      }
+
+      .pill {
+        background: rgba(236, 219, 204, 0.7);
+        border-radius: 999px;
+        padding: 0.35rem 0.9rem;
+        font-size: 0.8rem;
+        color: #4a3629;
+      }
+
+      .subheading {
+        font-size: 0.97rem;
+        font-weight: 600;
+        margin: 0.2rem 0 0.1rem;
+      }
+
+      .muted {
+        font-size: 0.85rem;
+        color: var(--muted);
+      }
+
+      .list-check {
+        list-style: none;
+        padding-left: 0;
+        margin: 0.4rem 0 0;
+        font-size: 0.9rem;
+      }
+
+      .list-check li {
+        margin-bottom: 0.25rem;
+      }
+
+      .list-check li::before {
+        content: "✔";
+        margin-right: 0.4rem;
+        font-size: 0.85rem;
+        color: var(--primary);
+      }
+
+      /* Angebot cards */
+
+      .cards-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1rem;
+        margin-top: 0.6rem;
+      }
+
+      .card {
+        border-radius: var(--radius-lg);
+        border: 1px solid rgba(217, 195, 178, 0.9);
+        padding: 0.95rem 1rem;
+        background: linear-gradient(to bottom, #fffaf6, #f4e6db);
+        box-shadow: 0 14px 30px rgba(95, 72, 57, 0.08);
+        font-size: 0.9rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.35rem;
+      }
+
+      .card h3 {
+        font-size: 0.98rem;
+        margin: 0;
+      }
+
+      .card ul {
+        margin: 0.25rem 0 0;
+        padding-left: 1rem;
+        font-size: 0.86rem;
+      }
+
+      /* Ablauf timeline */
+
+      .timeline {
+        list-style: none;
+        padding-left: 0;
+        margin: 0.2rem 0 0;
+        border-left: 2px solid rgba(201, 175, 156, 0.8);
+      }
+
+      .timeline li {
+        position: relative;
+        padding-left: 1.3rem;
+        margin-bottom: 0.9rem;
+      }
+
+      .timeline bullet {
+        display: none;
+      }
+
+      .timeline li::before {
+        content: "";
+        position: absolute;
+        left: -5px;
+        top: 0.15rem;
+        width: 10px;
+        height: 10px;
+        border-radius: 999px;
+        border: 2px solid #fffaf6;
+        background: var(--primary);
+        box-shadow: 0 0 0 3px rgba(196, 147, 115, 0.4);
+      }
+
+      .timeline-title {
+        font-weight: 600;
+        font-size: 0.93rem;
+      }
+
+      .timeline-text {
+        font-size: 0.86rem;
+        color: var(--muted);
+      }
+
+      /* FAQ */
+
+      .faq-list {
+        margin-top: 0.3rem;
+      }
+
+      .faq-item {
+        border-radius: var(--radius-lg);
+        border: 1px solid rgba(213, 195, 180, 0.9);
+        padding: 0.7rem 0.9rem;
+        background: rgba(254, 249, 244, 0.9);
+        margin-bottom: 0.6rem;
+        cursor: pointer;
+        transition: background 0.15s ease;
+      }
+
+      .faq-item:hover {
+        background: rgba(252, 244, 237, 1);
+      }
+
+      .faq-question {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+        font-size: 0.9rem;
+        font-weight: 600;
+      }
+
+      .faq-toggle {
+        font-size: 1.2rem;
+        line-height: 1;
+        color: var(--muted);
+        flex-shrink: 0;
+      }
+
+      .faq-answer {
+        font-size: 0.86rem;
+        color: var(--muted);
+        margin-top: 0.4rem;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.18s ease-out;
+      }
+
+      .faq-item.open .faq-answer {
+        max-height: 200px;
+      }
+
+      .faq-item.open .faq-toggle {
+        transform: rotate(90deg);
+      }
+
+      /* Kontakt */
+
+      .contact-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.6fr);
+        gap: 1.5rem;
+        align-items: flex-start;
+      }
+
+      .contact-details {
+        font-size: 0.92rem;
+      }
+
+      .contact-details p {
+        margin: 0.25rem 0;
+      }
+
+      .contact-highlight {
+        padding: 0.7rem 0.9rem;
+        border-radius: var(--radius-lg);
+        background: rgba(242, 224, 209, 0.9);
+        border: 1px solid rgba(189, 154, 130, 0.9);
+        font-size: 0.86rem;
+        color: #4a3629;
+        display: flex;
+        gap: 0.55rem;
+        align-items: flex-start;
+        margin-top: 0.7rem;
+      }
+
+      .contact-highlight span.icon {
+        font-size: 1.1rem;
+        line-height: 1;
+      }
+
+      .contact-form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.75rem 0.9rem;
+        font-size: 0.9rem;
+      }
+
+      .contact-form .field-full {
+        grid-column: 1 / -1;
+      }
+
+      .field label {
+        display: block;
+        font-size: 0.8rem;
+        margin-bottom: 0.25rem;
+        color: var(--muted);
+      }
+
+      .field input,
+      .field textarea {
+        width: 100%;
+        border-radius: 14px;
+        border: 1px solid rgba(205, 186, 170, 0.9);
+        padding: 0.5rem 0.7rem;
+        font-family: inherit;
+        font-size: 0.9rem;
+        background: rgba(255, 253, 250, 0.9);
+        outline: none;
+        transition: border-color 0.12s ease, box-shadow 0.12s ease,
+          background 0.12s ease;
+      }
+
+      .field textarea {
+        min-height: 110px;
+        resize: vertical;
+      }
+
+      .field input:focus,
+      .field textarea:focus {
+        border-color: var(--primary-soft);
+        box-shadow: 0 0 0 1px rgba(179, 130, 103, 0.35);
+        background: #fffdf9;
+      }
+
+      .contact-note {
+        font-size: 0.78rem;
+        color: var(--muted);
+        margin-top: 0.35rem;
+      }
+
+      .btn-submit {
+        grid-column: 1 / -1;
+        justify-self: flex-start;
+        padding: 0.7rem 1.4rem;
+        border-radius: 999px;
+        border: none;
+        cursor: pointer;
+        background: linear-gradient(
+          135deg,
+          var(--primary),
+          var(--primary-soft)
+        );
+        color: #fff7f1;
+        font-weight: 600;
+        font-size: 0.9rem;
+        box-shadow: 0 16px 32px rgba(105, 64, 44, 0.35);
+        margin-top: 0.25rem;
+      }
+
+      .btn-submit:hover {
+        filter: brightness(1.04);
+        transform: translateY(-1px);
+      }
+
+      .btn-submit:active {
+        transform: translateY(0);
+        box-shadow: 0 12px 24px rgba(105, 64, 44, 0.3);
+      }
+
+      /* Footer */
+
+      footer {
+        max-width: 1100px;
+        margin: 0 auto 1.5rem;
+        padding: 0.5rem 1.5rem 0;
+        font-size: 0.78rem;
+        color: var(--muted);
+        display: flex;
+        gap: 1rem;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+
+      .footer-links {
+        display: flex;
+        gap: 0.8rem;
+        flex-wrap: wrap;
+      }
+
+      .footer-links a {
+        text-decoration: underline;
+        text-decoration-thickness: 1px;
+        text-underline-offset: 3px;
+      }
+
+      /* Responsive */
+
+      @media (max-width: 880px) {
+        .hero {
+          grid-template-columns: minmax(0, 1fr);
+          padding-top: 1.9rem;
+        }
+
+        .hero-left {
+          padding-right: 0;
+        }
+
+        .hero-card {
+          max-width: 460px;
+          margin: 0 auto;
+        }
+
+        section {
+          padding: 1.2rem 1rem;
+        }
+
+        .two-col,
+        .cards-grid,
+        .contact-grid {
+          grid-template-columns: minmax(0, 1fr);
+        }
+
+        .cards-grid {
+          gap: 0.8rem;
+        }
+
+        .nav-links {
+          position: absolute;
+          inset: 52px 0 auto 0;
+          padding: 0.7rem 1.4rem 0.9rem;
+          background: rgba(247, 244, 241, 0.97);
+          border-bottom: 1px solid rgba(210, 195, 184, 0.8);
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 0.8rem;
+          transform-origin: top;
+          transform: scaleY(0);
+          opacity: 0;
+          pointer-events: none;
+          transition: transform 0.18s ease-out, opacity 0.18s ease-out;
+        }
+
+        .nav-links.open {
+          transform: scaleY(1);
+          opacity: 1;
+          pointer-events: auto;
+        }
+
+        .nav-button {
+          align-self: stretch;
+          justify-content: center;
+          text-align: center;
+        }
+
+        .nav-toggle {
+          display: block;
+        }
+      }
+
+      @media (max-width: 540px) {
+        main {
+          padding-inline: 1.05rem;
+        }
+
+        .hero {
+          padding-inline: 0.2rem;
+        }
+
+        section {
+          border-radius: 18px;
+        }
+
+        .contact-form {
+          grid-template-columns: 1fr;
+        }
+
+        .hero-card-footer {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="nav">
+        <a href="#top" class="logo">
+          <div class="logo-mark">B</div>
+          <div>
+            <div class="logo-text-main">Psychotherapie Bastine</div>
+            <div class="logo-text-sub">
+              Privatpraxis für Psychotherapie &amp; Neuropsychologie
+            </div>
+          </div>
+        </a>
+        <nav class="nav-links" id="navLinks">
+          <a href="#about">Über mich</a>
+          <a href="#services">Angebot</a>
+          <a href="#approach">Arbeitsweise</a>
+          <a href="#process">Ablauf</a>
+          <a href="#contact">Kontakt</a>
+          <button
+            class="nav-button"
+            onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})"
+          >
+            Termin anfragen
+          </button>
+        </nav>
+        <button
+          class="nav-toggle"
+          id="navToggle"
+          aria-label="Navigation umschalten"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <main id="top">
+      <!-- Hero -->
+      <section class="hero" aria-label="Einführung">
+        <div class="hero-left">
+          <div class="hero-overline">
+            Privatpraxis in vertrauensvoller Atmosphäre
+          </div>
+          <h1>Psychotherapie <span>Bastine</span></h1>
+          <p class="hero-subtitle">
+            Begleitung mit Erfahrung, Klarheit und Wertschätzung – seit über
+            40&nbsp;Jahren.
+          </p>
+
+          <div class="hero-badge-row">
+            <div class="badge">
+              <span class="badge-dot"></span>
+              Diplom-Psychologin
+            </div>
+            <div class="badge">
+              <span class="badge-dot"></span>
+              Psychologische Psychotherapeutin (tiefenpsychologisch fundiert)
+            </div>
+            <div class="badge">
+              <span class="badge-dot"></span>
+              Klinische Neuropsychologin
+            </div>
+          </div>
+
+          <p class="hero-text">
+            In meiner Praxis finden Sie einen geschützten Raum, um innezuhalten,
+            Belastendes auszusprechen und neue Perspektiven zu entwickeln. Ich
+            begleite Sie professionell und in Ihrem Tempo – mit einem Blick für
+            die Tiefe Ihrer Lebensgeschichte und die Möglichkeiten in der
+            Gegenwart.
+          </p>
+
+          <div class="hero-cta-row">
+            <button
+              class="btn-primary"
+              onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})"
+            >
+              Unverbindliches Erstgespräch anfragen
+            </button>
+            <a href="#process" class="btn-secondary-link">
+              <span class="icon">⟶</span> Wie läuft eine Therapie ab?
+            </a>
+          </div>
+          <div class="hero-note">
+            Aktuell sind begrenzt Plätze für neue Patient:innen verfügbar.
+          </div>
+        </div>
+
+        <aside class="hero-card" aria-label="Kurzprofil">
+          <div class="hero-card-header">
+            <div class="profile-avatar" aria-hidden="true">B</div>
+            <div>
+              <div class="hero-card-name">Dipl.-Psych. Bastine</div>
+              <div class="hero-card-role">
+                Psychologische Psychotherapeutin &amp; Klinische
+                Neuropsychologin
+              </div>
+            </div>
+          </div>
+          <div class="hero-card-exp">
+            <span>◎</span> Über 40&nbsp;Jahre Berufserfahrung
+          </div>
+          <div class="hero-card-text">
+            Mein beruflicher Weg führte mich in Ausbildungseinrichtungen für
+            Sozialpädagog:innen, Rehabilitationskliniken, die
+            Krankenhauspsychotherapie und seit vielen Jahren in meine eigene
+            Privatpraxis. Diese Vielfalt an Erfahrungen fließt in jede
+            therapeutische Begegnung ein.
+          </div>
+          <ul class="hero-card-list">
+            <li>tiefenpsychologisch fundierte Einzelpsychotherapie</li>
+            <li>klinisch-neuropsychologische Diagnostik und Beratung</li>
+            <li>Unterstützung bei seelischen Krisen &amp; Neubeginn</li>
+          </ul>
+          <div class="hero-card-footer">
+            <div>
+              <span class="hero-card-status-dot"></span>
+              Erstgespräch nach individueller Terminvereinbarung
+            </div>
+            <div class="hero-card-contact">
+              <strong>E-Mail:</strong> praxis@psychotherapie-bastine.de<br />
+              <strong>Telefon:</strong> 0000&nbsp;/&nbsp;000&nbsp;00&nbsp;00
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <!-- Über mich -->
+      <section id="about" aria-labelledby="about-heading">
+        <div class="section-header">
+          <h2 class="section-title" id="about-heading">Über mich</h2>
+          <div class="section-kicker">Wer Sie begleitet</div>
+        </div>
+
+        <div class="two-col">
+          <div class="section-text">
+            <p>
+              Ich bin Diplom-Psychologin, Psychologische Psychotherapeutin
+              (tiefenpsychologisch fundiert) und Klinische Neuropsychologin mit
+              über 40&nbsp;Jahren Berufserfahrung.
+            </p>
+            <p>
+              Als Therapeutin ist mir ein respektvoller, zugewandter und ruhiger
+              Umgang besonders wichtig. In der gemeinsamen Arbeit geht es darum,
+              Ihre ganz persönliche Geschichte zu verstehen und behutsam zu
+              erkunden, was Ihre aktuellen Symptome, Gefühle und Muster geprägt
+              hat.
+            </p>
+            <p>
+              Mein Anliegen ist es, Ihnen einen verlässlichen Rahmen zu bieten,
+              in dem auch Schwieriges Platz haben darf – und sich Schritt für
+              Schritt neue Handlungsspielräume eröffnen.
+            </p>
+          </div>
+
+          <div>
+            <div class="subheading">Berufliche Stationen</div>
+            <p class="muted">
+              Die Arbeit mit Menschen in sehr unterschiedlichen
+              Lebenssituationen hat meinen therapeutischen Blick geprägt:
+            </p>
+            <ul class="list-check">
+              <li>Ausbildungseinrichtungen für Sozialpädagog:innen</li>
+              <li>Rehabilitationskliniken und medizinische Zentren</li>
+              <li>Krankenhauspsychotherapie im stationären Bereich</li>
+              <li>
+                Eigene Privatpraxis für Psychotherapie &amp; Neuropsychologie
+              </li>
+            </ul>
+
+            <div style="margin-top: 0.7rem">
+              <div class="subheading">Haltung in der Therapie</div>
+              <p class="muted">
+                Ich arbeite wertschätzend, transparent und auf Augenhöhe. Sie
+                bringen Ihre Lebenskenntnis mit – ich stelle meine
+                Fachkompetenz, Erfahrung und einen geschützten Rahmen zur
+                Verfügung.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Angebot -->
+      <section id="services" aria-labelledby="services-heading">
+        <div class="section-header">
+          <h2 class="section-title" id="services-heading">Angebot</h2>
+          <div class="section-kicker">Wobei ich Sie unterstützen kann</div>
+        </div>
+
+        <div class="section-text">
+          <p>
+            In meiner Praxis behandele ich Erwachsene mit unterschiedlichen
+            psychischen und psychosomatischen Belastungen. Häufige Themen sind:
+          </p>
+        </div>
+
+        <div class="cards-grid">
+          <article class="card">
+            <h3>Psychische Belastungen</h3>
+            <ul>
+              <li>Depressive Verstimmungen &amp; Burnout</li>
+              <li>Ängste, innere Unruhe, Überforderung</li>
+              <li>Schlafstörungen, Grübeln, Selbstzweifel</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>Lebenskrisen &amp; Beziehungen</h3>
+            <ul>
+              <li>Konflikte in Partnerschaft, Familie und Beruf</li>
+              <li>Verlust, Trennung, Neuorientierung</li>
+              <li>Wiederkehrende Muster in Beziehungen</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>Körper &amp; Neuropsychologie</h3>
+            <ul>
+              <li>Psychosomatische Beschwerden</li>
+              <li>Folgen neurologischer Erkrankungen</li>
+              <li>Neuropsychologische Diagnostik &amp; Beratung</li>
+            </ul>
+          </article>
+        </div>
+
+        <div style="margin-top: 1rem">
+          <div class="subheading">Form der Behandlung</div>
+          <p class="muted">
+            Ich biete tiefenpsychologisch fundierte Einzelpsychotherapie für
+            Erwachsene an. Die Dauer und Frequenz der Sitzungen besprechen wir
+            im Rahmen der probatorischen Gespräche individuell.
+          </p>
+          <div class="pill-list">
+            <span class="pill">Einzeltherapie (50 Minuten)</span>
+            <span class="pill"
+              >Selbstzahler:innen &amp; private Krankenversicherung</span
+            >
+            <span class="pill">Termine nach Vereinbarung</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Arbeitsweise -->
+      <section id="approach" aria-labelledby="approach-heading">
+        <div class="section-header">
+          <h2 class="section-title" id="approach-heading">Arbeitsweise</h2>
+          <div class="section-kicker">
+            Tiefenpsychologisch fundiert &amp; neuropsychologisch informiert
+          </div>
+        </div>
+
+        <div class="two-col">
+          <div class="section-text">
+            <p>
+              In der tiefenpsychologisch fundierten Psychotherapie gehen wir
+              gemeinsam der Frage nach, wie frühere Erfahrungen, Beziehungen und
+              innere Überzeugungen Ihr Erleben von heute beeinflussen. Viele
+              Symptome haben eine Geschichte – wenn wir diese verstehen, werden
+              Veränderungen möglich.
+            </p>
+            <p>
+              Wir arbeiten überwiegend im Gespräch. Dabei achten wir sowohl auf
+              Ihre aktuellen Belastungen als auch auf die darunterliegenden
+              Themen und Konflikte. Sie entscheiden jederzeit, was angesprochen
+              werden soll und in welchem Tempo wir vorgehen.
+            </p>
+          </div>
+          <div>
+            <div class="subheading">Was Ihnen in der Therapie begegnet</div>
+            <ul class="list-check">
+              <li>ein sicherer Rahmen mit Schweigepflicht</li>
+              <li>strukturiertes Vorgehen mit Raum für Spontanes</li>
+              <li>Rückmeldungen, die Klarheit schaffen sollen</li>
+              <li>Ermutigung, neue Sicht- und Verhaltensweisen zu erproben</li>
+            </ul>
+
+            <div style="margin-top: 0.7rem">
+              <div class="subheading">Neuropsychologische Perspektive</div>
+              <p class="muted">
+                Durch meine langjährige Erfahrung in der Klinischen
+                Neuropsychologie berücksichtige ich bei Bedarf auch die
+                Wechselwirkungen zwischen Gehirn, Körper und Psyche – zum
+                Beispiel nach neurologischen Erkrankungen oder Unfällen.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Ablauf -->
+      <section id="process" aria-labelledby="process-heading">
+        <div class="section-header">
+          <h2 class="section-title" id="process-heading">Ablauf</h2>
+          <div class="section-kicker">Vom ersten Kontakt bis zur Therapie</div>
+        </div>
+
+        <div class="two-col">
+          <div>
+            <p class="section-text">
+              Der erste Schritt in eine Therapie darf sich gut überlegt und
+              zugleich überschaubar anfühlen. Nachfolgend finden Sie einen
+              orientierenden Überblick über den üblichen Ablauf:
+            </p>
+            <ul class="timeline" aria-label="Ablaufschritte">
+              <li>
+                <div class="timeline-title">1. Kontaktaufnahme</div>
+                <div class="timeline-text">
+                  Sie melden sich per E-Mail oder telefonisch und schildern kurz
+                  Ihr Anliegen. Wir klären organisatorische Fragen und
+                  vereinbaren einen Termin für ein Erstgespräch.
+                </div>
+              </li>
+              <li>
+                <div class="timeline-title">2. Erstgespräch</div>
+                <div class="timeline-text">
+                  Im vertraulichen Rahmen lernen wir uns kennen, besprechen Ihre
+                  Situation und Ihre Erwartungen an die Therapie. Sie erhalten
+                  einen ersten Eindruck von meiner Arbeitsweise.
+                </div>
+              </li>
+              <li>
+                <div class="timeline-title">3. Probatorische Sitzungen</div>
+                <div class="timeline-text">
+                  In weiteren Probesitzungen vertiefen wir das Verständnis Ihrer
+                  Beschwerden und Lebensgeschichte. Wir formulieren gemeinsame
+                  Ziele und prüfen, ob eine Zusammenarbeit für beide Seiten
+                  sinnvoll ist.
+                </div>
+              </li>
+              <li>
+                <div class="timeline-title">4. Therapiebeginn</div>
+                <div class="timeline-text">
+                  Kommt eine Therapie zustande, vereinbaren wir einen festen
+                  Terminrhythmus (in der Regel wöchentlich oder vierzehntägig).
+                  Inhalt und Dauer der Behandlung werden individuell abgestimmt.
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="subheading">Häufige Fragen</div>
+            <div class="faq-list" id="faqList">
+              <div class="faq-item">
+                <div class="faq-question">
+                  <span>Wie lange dauert eine Therapiesitzung?</span>
+                  <span class="faq-toggle">›</span>
+                </div>
+                <div class="faq-answer">
+                  Eine Einzelsitzung dauert in der Regel 50 Minuten. In
+                  begründeten Fällen können abweichende Zeiten vereinbart
+                  werden.
+                </div>
+              </div>
+              <div class="faq-item">
+                <div class="faq-question">
+                  <span>Wer übernimmt die Kosten?</span>
+                  <span class="faq-toggle">›</span>
+                </div>
+                <div class="faq-answer">
+                  Die Praxis ist als Privatpraxis organisiert. Je nach
+                  Versicherung können die Kosten von privaten
+                  Krankenversicherungen oder Beihilfestellen ganz oder teilweise
+                  erstattet werden. Gesetzlich Versicherte haben die
+                  Möglichkeit, als Selbstzahler:innen in Behandlung zu kommen.
+                  Genaue Informationen erhalten Sie im persönlichen Gespräch.
+                </div>
+              </div>
+              <div class="faq-item">
+                <div class="faq-question">
+                  <span>Wie schnell bekomme ich einen Termin?</span>
+                  <span class="faq-toggle">›</span>
+                </div>
+                <div class="faq-answer">
+                  Die Wartezeit variiert je nach Auslastung der Praxis. Ich
+                  bemühe mich, Ihnen zeitnah ein Erstgespräch anzubieten.
+                  Schreiben Sie mir gern, wenn Sie flexible Zeiten mitbringen.
+                </div>
+              </div>
+              <div class="faq-item">
+                <div class="faq-question">
+                  <span>Was passiert mit meinen Daten?</span>
+                  <span class="faq-toggle">›</span>
+                </div>
+                <div class="faq-answer">
+                  Ihre Angaben werden vertraulich behandelt und ausschließlich
+                  im Rahmen der gesetzlichen Bestimmungen dokumentiert. Es
+                  erfolgt keine Weitergabe an Dritte ohne Ihre ausdrückliche
+                  Zustimmung.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Kontakt -->
+      <section id="contact" aria-labelledby="contact-heading">
+        <div class="section-header">
+          <h2 class="section-title" id="contact-heading">Kontakt</h2>
+          <div class="section-kicker">Der erste Schritt darf klein sein</div>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-details">
+            <p>
+              Wenn Sie Interesse an einem Erstgespräch haben oder Fragen zum
+              Angebot stellen möchten, können Sie mich per E-Mail oder über das
+              untenstehende Formular kontaktieren.
+            </p>
+            <p>
+              <strong>Praxis Psychotherapie Bastine</strong><br />
+              Musterstraße&nbsp;1<br />
+              00000 Musterstadt
+            </p>
+            <p>
+              <strong>Telefon:</strong>
+              0000&nbsp;/&nbsp;000&nbsp;00&nbsp;00<br />
+              <strong>E-Mail:</strong> praxis@psychotherapie-bastine.de
+            </p>
+
+            <div class="contact-highlight">
+              <span class="icon">ℹ</span>
+              <span>
+                Bitte haben Sie Verständnis dafür, dass ich während laufender
+                Therapiesitzungen nicht persönlich ans Telefon gehen kann.
+                Hinterlassen Sie gern eine Nachricht auf dem Anrufbeantworter –
+                ich melde mich so bald wie möglich bei Ihnen zurück.
+              </span>
+            </div>
+          </div>
+
+          <form class="contact-form" onsubmit="handleFormSubmit(event)">
+            <div class="field">
+              <label for="name">Name*</label>
+              <input id="name" name="name" type="text" required />
+            </div>
+            <div class="field">
+              <label for="email">E-Mail*</label>
+              <input id="email" name="email" type="email" required />
+            </div>
+            <div class="field">
+              <label for="phone">Telefon (optional)</label>
+              <input id="phone" name="phone" type="tel" />
+            </div>
+            <div class="field">
+              <label for="subject">Betreff</label>
+              <input
+                id="subject"
+                name="subject"
+                type="text"
+                placeholder="z. B. Anfrage Erstgespräch"
+              />
+            </div>
+            <div class="field field-full">
+              <label for="message">Ihre Nachricht*</label>
+              <textarea
+                id="message"
+                name="message"
+                required
+                placeholder="Worum geht es Ihnen aktuell?"
+              ></textarea>
+            </div>
+            <div class="field field-full">
+              <label>
+                <input
+                  type="checkbox"
+                  required
+                  style="width: auto; margin-right: 0.4rem"
+                />
+                Ich habe die Hinweise zum Datenschutz zur Kenntnis genommen.
+              </label>
+              <div class="contact-note">
+                Hinweis: Dieses Formular dient ausschließlich der ersten
+                Kontaktaufnahme. Bitte übermitteln Sie keine sensiblen
+                medizinischen Daten.
+              </div>
+            </div>
+            <button class="btn-submit" type="submit">Nachricht senden</button>
+          </form>
+        </div>
+      </section>
+
+      <!-- Rechtliches Platzhalter -->
+      <section id="impressum" aria-label="Rechtliche Hinweise">
+        <div class="section-header">
+          <h2 class="section-title">Impressum &amp; Datenschutz</h2>
+          <div class="section-kicker">Hinweis</div>
+        </div>
+        <p class="section-text">
+          Die Inhalte dieser Beispielseite dienen ausschließlich
+          Demonstrationszwecken und ersetzen kein rechtlich geprüftes Impressum
+          oder eine Datenschutzerklärung. Für eine reale Praxiswebsite lassen
+          Sie bitte ein vollständiges Impressum und eine Datenschutzinformation
+          nach den geltenden gesetzlichen Vorgaben erstellen.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <div>© Psychotherapie Bastine – Beispielseite</div>
+      <div class="footer-links">
+        <a href="#impressum">Impressum</a>
+        <a href="#impressum">Datenschutz</a>
+      </div>
+    </footer>
+
+    <script>
+      // Mobile navigation toggle
+      const navToggle = document.getElementById("navToggle");
+      const navLinks = document.getElementById("navLinks");
+
+      navToggle.addEventListener("click", () => {
+        navToggle.classList.toggle("active");
+        navLinks.classList.toggle("open");
+      });
+
+      // Close nav on link click (mobile)
+      navLinks.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          if (navLinks.classList.contains("open")) {
+            navLinks.classList.remove("open");
+            navToggle.classList.remove("active");
+          }
+        });
+      });
+
+      // FAQ accordion behavior
+      const faqItems = document.querySelectorAll(".faq-item");
+      faqItems.forEach((item) => {
+        item.addEventListener("click", () => {
+          item.classList.toggle("open");
+        });
+      });
+
+      // Simple form handler (demo only)
+      function handleFormSubmit(event) {
+        event.preventDefault();
+        alert(
+          "Vielen Dank für Ihre Nachricht.\n\nDies ist eine Beispielseite – in einer echten Praxiswebsite würde Ihre Anfrage nun sicher übermittelt und zeitnah beantwortet werden."
+        );
+        event.target.reset();
+      }
+    </script>
+  </body>
+</html>
