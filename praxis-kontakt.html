@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Praxis &amp; Kontakt – Praxis für Psychotherapie</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Source+Sans+3:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav
+      id="mainNav"
+      class="navbar navbar-expand-lg navbar-light bg-white border-bottom fixed-top"
+    >
+      <div class="container">
+        <a class="navbar-brand fw-semibold" href="index.html">
+          Praxis für Psychotherapie<br />
+          <span class="small text-muted d-block"
+            >Dipl.-Psych. Judith R. Bastine</span
+          >
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarContent"
+          aria-controls="navbarContent"
+          aria-expanded="false"
+          aria-label="Navigation umschalten"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarContent"
+        >
+          <ul class="navbar-nav align-items-lg-center">
+            <li class="nav-item">
+              <a class="nav-link" href="angebot.html">Angebot</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="ueber-mich.html">Über mich</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="praxis-kontakt.html"
+                >Praxis &amp; Kontakt</a
+              >
+            </li>
+            <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+              <a
+                class="btn btn-outline-primary px-3"
+                href="praxis-kontakt.html"
+              >
+                Erstgespräch anfragen
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header class="page-header">
+      <div class="container">
+        <div class="row align-items-center gy-4">
+          <div class="col-lg-7">
+            <h1>Praxis &amp; Kontakt</h1>
+            <p>
+              Ihre Nachricht oder telefonische Anfrage ist der erste Schritt –
+              alles Weitere klären wir in Ruhe im persönlichen Gespräch.
+            </p>
+          </div>
+          <div class="col-lg-5">
+            <div class="symbol-image-wrapper">
+              <img
+                src="images/door.jpg"
+                alt="Symbolische Außenansicht oder ruhiger Hauseingang"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="section-default">
+        <div class="container">
+          <div class="row gy-4">
+            <div class="col-lg-5">
+              <h2 class="h6 text-uppercase text-muted tracking mb-3">Praxis</h2>
+              <p class="text-muted small mb-3">
+                Die Praxis befindet sich in schöner Lage in der Weststadt und
+                ist mit öffentlichen Verkehrsmitteln gut erreichbar.
+              </p>
+
+              <dl class="small mb-3">
+                <dt class="text-muted text-uppercase tracking mb-1">Adresse</dt>
+                <dd class="mb-2">
+                  Franz-Knauff-Straße 15<br />
+                  69115 Heidelberg<br />
+                  Praxis Dr. Christine Köhler
+                </dd>
+
+                <dt class="text-muted text-uppercase tracking mb-1">Telefon</dt>
+                <dd class="mb-2">
+                  <a href="tel:+4915125257651">0151–25 25 76 51</a>
+                </dd>
+
+                <dt class="text-muted text-uppercase tracking mb-1">E-Mail</dt>
+                <dd class="mb-2">
+                  <a
+                    href="mailto:jr.bastine@web.de"
+                    class="text-decoration-none"
+                  >
+                    jr.bastine@web.de
+                  </a>
+                </dd>
+              </dl>
+
+              <p class="text-muted small mb-0">
+                Während der Therapiesitzungen kann ich Ihren Anruf nicht
+                persönlich entgegennehmen. Bitte hinterlassen Sie mir eine
+                Nachricht oder schreiben Sie mir eine E-Mail – ich melde mich so
+                bald wie möglich zurück.
+              </p>
+            </div>
+
+            <div class="col-lg-7">
+              <h2 class="h6 text-uppercase text-muted tracking mb-3">
+                Kontaktformular
+              </h2>
+              <p class="text-muted small mb-3">
+                { Dieses Formular ist ein Beispiel. Die technische Umsetzung des
+                E-Mail-Versands erfolgt später datenschutzkonform über Ihren
+                Hosting-Anbieter oder einen entsprechenden Dienst. }
+              </p>
+
+              <form id="contactForm" novalidate>
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label for="name" class="form-label small">Name</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="name"
+                      required
+                    />
+                  </div>
+                  <div class="col-md-6">
+                    <label for="email" class="form-label small">E-Mail</label>
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="email"
+                      required
+                    />
+                  </div>
+                  <div class="col-12">
+                    <label for="subject" class="form-label small"
+                      >Betreff</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="subject"
+                      placeholder="z. B. Anfrage Erstgespräch"
+                    />
+                  </div>
+                  <div class="col-12">
+                    <label for="message" class="form-label small"
+                      >Ihre Nachricht</label
+                    >
+                    <textarea
+                      id="message"
+                      class="form-control"
+                      rows="4"
+                      required
+                    ></textarea>
+                  </div>
+                  <div
+                    class="col-12 d-flex flex-wrap align-items-center justify-content-between gap-2"
+                  >
+                    <button type="submit" class="btn btn-primary">
+                      Nachricht senden
+                    </button>
+                    <div class="small text-muted">
+                      Ihre Daten werden vertraulich behandelt und nicht an
+                      Dritte weitergegeben.
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div id="formMessage" class="small text-primary"></div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="py-3 border-top small text-muted">
+      <div class="container d-flex flex-wrap justify-content-between gap-2">
+        <div>
+          © <span id="year"></span> Privatpraxis für Psychotherapie –
+          Dipl.-Psych. Judith R. Bastine
+        </div>
+        <div class="d-flex gap-3">
+          <a href="impressum.html" class="text-muted text-decoration-none"
+            >Impressum</a
+          >
+          <a href="impressum.html" class="text-muted text-decoration-none"
+            >Datenschutz</a
+          >
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
