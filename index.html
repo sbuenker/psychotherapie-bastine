@@ -1,36 +1,60 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
   <head>
     <meta charset="UTF-8" />
-    <title>Praxis für Psychotherapie – Dipl.-Psych. Judith R. Bastine</title>
+    <title>Psychotherapie in Heidelberg – Dipl.-Psych. Judith R. Bastine | Privatpraxis</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="description"
-      content="Privatpraxis für Psychotherapie – tiefenpsychologisch fundiert, klinische Neuropsychologie, über 40 Jahre Berufserfahrung."
-    />
+    <meta name="description" content="Privatpraxis für Psychotherapie in Heidelberg. Tiefenpsychologisch fundierte Psychotherapie & klinische Neuropsychologie – über 40 Jahre Erfahrung. Erstgespräch möglich."/>
+    <link rel="canonical" href="https://www.psychotherapie-bastine.de/" />
 
     <!-- Bootstrap CSS -->
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      href="assets/css/bootstrap.min.css"
       rel="stylesheet"
     />
 
     <!-- Bootstrap Icons für Piktogramme -->
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      href="assets/icons/bootstrap-icons.css"
     />
 
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Source+Sans+3:wght@300;400;500;600&display=swap"
       rel="stylesheet"
-    />
+    /> -->
+    <link rel="stylesheet" href="/assets/css/fonts.css" />
 
     <!-- Eigenes CSS -->
     <link rel="stylesheet" href="style.css" />
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalBusiness",
+      "name": "Praxis für Psychotherapie – Dipl.-Psych. Judith R. Bastine",
+      "image": "https://www.psychotherapie-bastine.de/images/judith_bastine.JPG",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Franz-Knauff-Straße 15",
+        "addressLocality": "Heidelberg",
+        "postalCode": "69115",
+        "addressCountry": "DE"
+      },
+      "medicalSpecialty": [
+        "Psychotherapy",
+        "Neuropsychology"
+      ],
+      "telephone": "+4915125257651",
+      "email": "jr.bastine@web.de",
+      "areaServed": "Heidelberg",
+      "priceRange": "Privatpraxis"
+    }
+    </script>
+
   </head>
   <body>
     <!-- Navigation (jetzt mit Unterseiten-Links) -->
@@ -64,16 +88,16 @@
         >
           <ul class="navbar-nav align-items-lg-center">
             <li class="nav-item">
-              <a class="nav-link" href="behandlung.html">Behandlung</a>
+              <a class="nav-link" href="#ueber-mich" aria-label="Zur Über-mich-Seite">Über mich</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="ueber-mich.html">Über mich</a>
+              <a class="nav-link" href="#behandlung" aria-label="Zur Behandlung in der Psychotherapiepraxis">Behandlung</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="kontakt.html">Praxis &amp; Kontakt</a>
+              <a class="nav-link" href="#kontakt" aria-label="Zum Kontakt-Bereich">Praxis &amp; Kontakt</a>
             </li>
             <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
-              <a class="btn btn-outline-primary px-3" href="kontakt.html">
+              <a class="btn btn-outline-primary px-3" href="#kontakt">
                 Erstgespräch anfragen
               </a>
             </li>
@@ -88,25 +112,21 @@
         <div class="row align-items-center gy-5">
           <div class="col-lg-4">
             <figure class="hero-image-wrapper">
-              <!-- Platzhalterbild – später durch echtes Praxisfoto ersetzen -->
               <img
-                src="images/judith_bastine_1.JPG"
-                alt="Diplom-Psychologin Judith R. Bastine"
+                src="images/judith_bastine.JPG"
+                alt="Psychotherapeutin in Heidelberg – Dipl.-Psych. Judith R. Bastine"
                 class="img-fluid"
               />
               <figcaption class="figure-caption">
-                Diplom-Psychologin <strong>Judith R. Bastine</strong>
+                <strong>Judith R. Bastine</strong><br />
+                Diplom-Psychologin<br />
+                Psychologische Psychotherapeutin<br />
+                Klinische Neuropsychologin
               </figcaption>
             </figure>
           </div>
-          <!-- <div class="col-lg-1"></div> -->
-          <div class="col-lg-7 order-first order-md-1">
-            <!-- <p class="text-uppercase small text-primary mb-2 tracking">
-              Privatpraxis für Psychotherapie
-            </p> -->
+          <div class="col-lg-7 offset-md-1 order-first order-md-1">
             <h1 class="display-5 mb-3">
-              <!-- Ein ruhiger Ort für<br class="d-none d-md-inline" />
-              innere Klärung und neue Schritte. -->
               Willkommen in meiner Praxis für Psychotherapie
             </h1>
             <p class="lead text-muted mb-3">
@@ -117,44 +137,22 @@
               begleite ich Erwachsene seit über vier Jahrzehnten bei seelischen
               Belastungen, Erkrankungen und in Phasen der Neuorientierung.
             </p>
-            <!-- <p class="lead text-muted mb-4">
-              In meiner Praxis in Heidelberg finden Sie einen geschützten
-              Rahmen, in dem Ihre Themen ernst genommen werden und in Ruhe Platz
-              haben.
-            </p> -->
-
-            <!-- <div class="d-flex flex-wrap align-items-center gap-3">
-              <a href="kontakt.html" class="btn btn-primary">
-                Kontakt für Erstgespräch
-              </a>
-              <a
-                href="Behandlung.html"
-                class="btn btn-link px-0 text-decoration-none"
-              >
-                Mehr über mein Behandlung
-              </a>
-            </div> -->
-
-            <!-- <div class="mt-4 small text-muted">
-              Über 40 Jahre therapeutische Erfahrung · Tiefenpsychologisch
-              fundierte Psychotherapie · Klinische Neuropsychologie
-            </div> -->
           </div>
         </div>
       </div>
     </section>
 
     <!-- Teaser Über mich -->
-    <section class="section-default">
-      <div class="container">
-        <div class="row align-items-center gy-4">
+    <section class="section-watercolor">
+      <div class="overlay"></div>
+      <div class="container position-relative">
+        <div class="row justify-content-center align-items-center gy-4">
           <div class="col-lg-7">
-            <h2 class="h4 mb-2">Über mich</h2>
+            <h2 class="h2 mb-2" id="ueber-mich">Über mich</h2>
             <p class="text-muted mb-3">
               Seit über zwanzig Jahren arbeite ich in eigener Praxis, zuvor war
-              ich viele Jahre in der Erzieher:innen-Ausbildung, in
-              Rehabilitationskliniken und in neurologischen Krankenhausbereichen
-              tätig.
+              ich viele Jahre in Rehabilitationskliniken und in neurologischen
+              Abteilungen von Krankenhäusern tätig.
             </p>
             <p class="text-muted mb-3">
               Diese Vielfalt an Kontexten hat meinen Blick für
@@ -165,69 +163,27 @@
               klinischer Erfahrung und fachlicher Klarheit.
             </p>
             <p class="text-muted mb-3">
-              In meiner Praxis biete ich
+              In meiner Heidelberger Praxis biete ich
               <strong>tiefenpsychologisch fundierte Psychotherapie</strong>
-              sowie <strong>beratende Gespräche</strong> an. Mein
-              <strong>Schwerpunkt</strong>
+              sowie <strong>beratende Gespräche</strong> an. Mein Schwerpunkt
               liegt auf der Klärung und Bearbeitung innerer Konflikte,
               seelischer Belastungen und wiederkehrender Muster, die das
               aktuelle Leben beeinträchtigen können.
             </p>
-            <!-- <a
-              href="ueber-mich.html"
-              class="btn btn-link px-0 text-decoration-none"
-            >
-              Mehr über meinen beruflichen Weg
-            </a> -->
-          </div>
-          <div class="col-lg-5">
-            <figure class="hero-image-wrapper">
-              <!-- Optional: Portrait oder symbolisches Bild -->
-              <img
-                src="images/tree_3.jpg"
-                alt="Symbolisches Portrait oder ruhiges Naturmotiv"
-                class="img-fluid"
-              />
-            </figure>
           </div>
         </div>
-      </div>
-    </section>
-
-    <!-- Bildstrecke Heidelberg (volle Breite) -->
-    <section class="section-image-break">
-      <div class="section-image-break-overlay">
-        <div class="container text-center">
-          <!-- <p class="small text-uppercase tracking mb-2">Heidelberg</p>
-          <p class="lead mb-0">
-            Ein vertrauter Blick auf die Stadt – und ein Ort, an dem neue
-            Perspektiven entstehen dürfen.
-          </p> -->
-        </div>
-      </div>
     </section>
 
     <!-- Drei Kacheln mit Icons (Psychotherapie / Neuropsychologie / Beratung) -->
-    <section class="section-default">
+    <section class="section-muted">
       <div class="container">
         <div class="row justify-content-center mb-4">
-          <div class="col-lg-8 text-center">
-            <h2 class="h4 mb-2">Wobei ich Sie unterstützen kann</h2>
+          <div class="col-lg-6 text-center">
+            <h2 class="h2 mb-2">Wobei ich Sie unterstützen kann</h2>
             <p class="text-muted mb-0">
-              Menschen kommen zu mir, wenn sich Belastungen festsetzen, sich
-              Muster wiederholen oder wenn eine Krise neue Orientierung braucht.
-              Häufige Anliegen sind:
+              Menschen kommen zu mir, wenn psychische Belastungen anhalten, sich wiederkehrende Muster zeigen oder sie sich in einer schwierigen Lebensphase Unterstützung wünschen.
+              <br />Häufige Anliegen sind:
             </p>
-            <!-- <p>
-              <ul class="text-muted d-inline-block text-start mb-0">
-                <li>Depression, Erschöpfung, Stressfolgen</li>
-                <li>Ängste, innere Unruhe, Grübeln</li>
-                <li>Verluste, Trennung, Lebensübergänge</li>
-                <li>Beziehungskonflikte und wiederkehrende Muster</li>
-                <li>Belastende Erfahrungen, die nachwirken</li>
-                <li>Begleitung bei neurologischen Erkrankungen und kognitiven Veränderungen</li>
-              </ul>
-            </p> -->
           </div>
         </div>
         <div class="row g-4">
@@ -287,8 +243,8 @@
               </div>
               <h3 class="h6 mb-1">Belastende Erfahrungen</h3>
               <p class="small text-muted mb-0">
-                Wenn Erlebtes nachwirkt und sich innerlich nicht zur Ruhe legen
-                lässt.
+                Wenn Vergangenes nicht abgeschlossen werden kann und weiter
+                belastet.
               </p>
             </div>
           </div>
@@ -306,22 +262,170 @@
               </p>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
 
-          <div class="text-center mt-4">
-            <a href="behandlung.html" class="btn btn-outline-primary px-4">
-              Mehr zur Behandlung
-            </a>
+    <!-- So arbeite ich -->
+    <section class="section-work section-watercolor">
+      <div class="overlay"></div>
+      <div class="container position-relative">
+        <!-- Einleitung -->
+        <div class="row justify-content-center mb-5">
+          <div class="col-lg-6 text-center">
+            <h2 class="h2 mb-3" id="behandlung">So arbeite ich</h2>
+            <p class="text-muted mb-0">
+              Psychotherapie verstehe ich als einen gemeinsamen, verstehenden
+              Prozess – getragen von fachlicher Klarheit, einem verlässlichen
+              Rahmen und der Zeit, die es braucht.
+            </p>
+          </div>
+        </div>
+
+        <!-- Behandlung -->
+        <div class="row mb-5 align-items-start">
+          <div class="col-lg-2 text-lg-center mb-3 mb-lg-0">
+            <div class="work-icon">
+              <i class="bi bi-chat-heart"></i>
+            </div>
+          </div>
+          <div class="col-lg-8">
+            <h3 class="h3 mb-2">Behandlung</h3>
+            <p class="text-muted mb-2">
+              Die tiefenpsychologisch fundierte Psychotherapie orientiert sich
+              an den individuellen Lebenserfahrungen und der Entstehung
+              aktueller Beschwerden. Symptome werden dabei nicht isoliert
+              betrachtet, sondern als Ausdruck innerer Konflikte, unbewusster
+              Dynamiken oder biografischer Herausforderungen verstanden.
+            </p>
+            <p class="text-muted mb-2">
+              Wir nehmen uns Zeit, Ihre aktuelle Belastung im Zusammenhang mit
+              Ihrer Lebensgeschichte zu betrachten und neue Perspektiven und
+              Handlungsmöglichkeiten zu entwickeln.
+            </p>
+            <p class="text-muted mb-0">
+              Wo es sinnvoll ist, fließen Elemente aus der klinischen
+              Neuropsychologie ein – etwa bei neurologischen Vorerkrankungen
+              oder kognitiven Veränderungen.
+            </p>
+          </div>
+        </div>
+
+        <!-- Ablauf -->
+        <div class="row mb-5 align-items-start">
+          <div class="col-lg-2 text-lg-center mb-3 mb-lg-0">
+            <div class="work-icon">
+              <i class="bi bi-signpost"></i>
+            </div>
+          </div>
+          <div class="col-lg-8">
+            <h3 class="h3 mb-2">Ablauf</h3>
+            <p class="text-muted mb-2">
+              Am Beginn steht ein Erstgespräch, in dem wir Ihre Situation, Ihre
+              Fragen und Wünsche besprechen. Sie erhalten einen Eindruck von
+              meiner Arbeitsweise und wir klären, ob eine Therapie in meiner
+              Praxis für Sie passend ist.
+            </p>
+            <p class="text-muted mb-2">
+              Wenn wir uns für eine Zusammenarbeit entscheiden, vereinbaren wir
+              in der Regel wöchentliche Gesprächstermine. Eine Sitzung dauert
+              üblicherweise 50 Minuten.
+            </p>
+            <p class="text-muted mb-2">
+              Bei neuropsychologischen Fragestellungen kann die Dauer im
+              Einzelfall abweichen – dies bespreche ich individuell mit Ihnen.
+            </p>
+            <p class="text-muted mb-0">
+              Wie lange eine psychotherapeutische Behandlung insgesamt dauert,
+              hängt von Ihrem Anliegen, Ihren Lebensumständen und vielen weiteren Faktoren ab. Transparenz über Ziele, Verlauf und mögliche
+              Alternativen ist mir dabei wichtig.
+            </p>
+          </div>
+        </div>
+        <div class="row justify-content-center mb-5 mt-5">
+          <div class="col-lg-10">
+            <div class="process-flow">
+              <div class="process-step">
+                <div class="process-icon">
+                  <i class="bi bi-chat-square-text"></i>
+                </div>
+                <h4 class="h6 mb-1">Erstgespräch</h4>
+                <p class="small text-muted mb-0">
+                  Wir besprechen Ihre aktuelle Situation, Ihre Fragen und Ihr
+                  Anliegen.
+                </p>
+              </div>
+
+              <div class="process-line"></div>
+
+              <div class="process-step">
+                <div class="process-icon">
+                  <i class="bi bi-check2-circle"></i>
+                </div>
+                <h4 class="h6 mb-1">Gemeinsame Entscheidung</h4>
+                <p class="small text-muted mb-0">
+                  Wir klären, ob eine Therapie bei mir für Sie passend ist.
+                </p>
+              </div>
+
+              <div class="process-line"></div>
+
+              <div class="process-step">
+                <div class="process-icon">
+                  <i class="bi bi-calendar-week"></i>
+                </div>
+                <h4 class="h6 mb-1">Regelmäßige Gespräche</h4>
+                <p class="small text-muted mb-0">
+                  Üblicherweise wöchentlich für 50 Minuten.
+                </p>
+              </div>
+
+              <div class="process-line"></div>
+
+              <div class="process-step">
+                <div class="process-icon">
+                  <i class="bi bi-arrow-repeat"></i>
+                </div>
+                <h4 class="h6 mb-1">Verlauf &amp; Abschluss</h4>
+                <p class="small text-muted mb-0">
+                  Ziele, Dauer und nächste Schritte werden fortlaufend gemeinsam
+                  reflektiert.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Rahmen & Kosten -->
+        <div class="row align-items-start">
+          <div class="col-lg-2 text-lg-center mb-3 mb-lg-0">
+            <div class="work-icon">
+              <i class="bi bi-shield-check"></i>
+            </div>
+          </div>
+          <div class="col-lg-8">
+            <h3 class="h3 mb-2">Rahmen &amp; Kosten</h3>
+            <p class="text-muted mb-2">
+              Ich führe eine Privatpraxis. Die Kosten werden von privaten
+              Krankenversicherungen je nach individuellem Vertrag oder von
+              Beihilfestellen ganz oder teilweise übernommen.
+            </p>
+            <p class="text-muted mb-0">
+              Für Selbstzahler:innen orientiert sich die Vergütung in der Regel
+              an der Gebührenordnung für Psychotherapeuten (GOP). Alle Gespräche
+              unterliegen der gesetzlichen Schweigepflicht.
+            </p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Der nächste Schritt -->
-    <section class="section-muted">
+    <section class="section-default">
       <div class="container">
         <div class="row justify-content-center mb-4">
-          <div class="col-lg-8 text-center">
-            <h2 class="h4 mb-2">Der nächste Schritt</h2>
+          <div class="col-lg-6 text-center">
+            <h2 class="h2 mb-2" id="kontakt">Der nächste Schritt</h2>
             <p class="text-muted mb-0">
               Wenn Sie überlegen, eine psychotherapeutische Begleitung zu
               beginnen, können wir die nächsten Schritte in Ruhe gemeinsam
@@ -331,50 +435,59 @@
         </div>
 
         <div class="row g-4 text-center">
-          <div class="col-md-4">
-            <div class="feature-card h-100">
+          <div class="col-md-6 col-lg-4">
+            <div class="feature-card h-100 text-center p-4">
               <div class="icon-circle mx-auto mb-3">
                 <i class="bi bi-telephone"></i>
               </div>
-              <h3 class="h6 mb-1">Kontakt aufnehmen</h3>
-              <p class="small text-muted mb-0">
-                Sie erreichen mich telefonisch oder per E-Mail, um ein
-                Erstgespräch anzufragen.
+              <h3 class="h6 mb-2">Telefonisch</h3>
+              <p class="text-muted small mb-3">
+                Während der Sitzungen bin ich nicht erreichbar. Hinterlassen Sie
+                mir gern eine Nachricht.
               </p>
+              <a href="tel: 4915125257651" class="btn btn-outline-primary">
+                0151&nbsp;–&nbsp;25&nbsp;25&nbsp;76&nbsp;51
+              </a>
             </div>
           </div>
 
-          <div class="col-md-4">
-            <div class="feature-card h-100">
+          <div class="col-md-6 col-lg-4">
+            <div class="feature-card h-100 text-center p-4">
               <div class="icon-circle mx-auto mb-3">
-                <i class="bi bi-chat-dots"></i>
+                <i class="bi bi-envelope"></i>
               </div>
-              <h3 class="h6 mb-1">Erstgespräch</h3>
-              <p class="small text-muted mb-0">
-                Wir besprechen Ihr Anliegen, offene Fragen und lernen uns
-                gegenseitig kennen.
+              <h3 class="h6 mb-2">Per E-Mail</h3>
+              <p class="text-muted small mb-3">
+                Schreiben Sie mir gern Ihr Anliegen in wenigen Worten. Ich melde
+                mich zeitnah zurück.
               </p>
+              <a
+                href="mailto:jr.bastine@web.de"
+                class="btn btn-outline-primary"
+              >
+                jr.bastine@web.de
+              </a>
             </div>
           </div>
 
-          <div class="col-md-4">
-            <div class="feature-card h-100">
+          <div class="col-md-6 col-lg-4">
+            <div class="feature-card h-100 text-center p-4">
               <div class="icon-circle mx-auto mb-3">
-                <i class="bi bi-check-circle"></i>
+                <i class="bi bi-house"></i>
               </div>
-              <h3 class="h6 mb-1">Gemeinsame Entscheidung</h3>
-              <p class="small text-muted mb-0">
-                Wir klären, ob und in welcher Form eine Zusammenarbeit sinnvoll
-                ist.
+              <h3 class="h6 mb-2">Praxis</h3>
+              <p class="text-muted small mb-3">
+                Die Praxis befindet sich in der Heidelberger Weststadt und ist
+                mit öffentlichen Verkehrsmitteln gut erreichbar.
+              </p>
+              <p class="text-muted small mb-3">
+                <strong>Dipl.-Psych. Judith R. Bastine</strong><br />
+                c/o Praxis Dr. Christine Köhler<br />
+                Franz-Knauff-Straße 15<br />
+                69115 Heidelberg
               </p>
             </div>
           </div>
-        </div>
-
-        <div class="text-center mt-4">
-          <a href="kontakt.html" class="btn btn-primary px-4">
-            Kontakt aufnehmen
-          </a>
         </div>
       </div>
     </section>
@@ -390,7 +503,7 @@
           <a href="impressum.html" class="text-muted text-decoration-none"
             >Impressum</a
           >
-          <a href="impressum.html" class="text-muted text-decoration-none"
+          <a href="datenschutzerklaerung.html" class="text-muted text-decoration-none"
             >Datenschutz</a
           >
         </div>

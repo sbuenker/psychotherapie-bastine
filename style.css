@@ -9,8 +9,13 @@
 /* Basis-Typografie */
 
 body {
-  font-family: "Source Sans 3", system-ui, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", sans-serif;
+  font-family:
+    "Source Sans 3",
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
   line-height: 1.7;
   color: #222222;
 }
@@ -22,7 +27,14 @@ h4,
 h5,
 h6,
 .navbar-brand {
-  font-family: "Lora", "Times New Roman", serif;
+  /* font-family: "Lora", "Times New Roman", serif; */
+  font-family:
+    "Source Sans 3",
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
   letter-spacing: 0.02em;
 }
 
@@ -320,4 +332,89 @@ footer {
   width: 100%;
   border-radius: 0.9rem;
   box-shadow: 0 0.5rem 1.4rem rgba(0, 0, 0, 0.06);
+}
+
+.section-work {
+  position: relative;
+  background-color: #f4f7f6;
+  /* background-image: url("images/pattern-soft.svg"); */
+  background-image: url("images/watercolor-paint.jpg");
+  background-repeat: repeat;
+  padding: 6rem 0;
+}
+
+.work-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgba(44, 94, 90, 0.1); /* dunkles Petrol, sehr dezent */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #2c5e5a;
+  font-size: 1.2rem;
+}
+
+.process-flow {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.process-step {
+  text-align: center;
+  max-width: 180px;
+}
+
+.process-icon {
+  width: 44px;
+  height: 44px;
+  margin: 0 auto 0.75rem;
+  border-radius: 50%;
+  background-color: rgba(44, 94, 90, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #2c5e5a;
+  font-size: 1.2rem;
+}
+
+.process-line {
+  flex: 1;
+  height: 1px;
+  background-color: rgba(44, 94, 90, 0.25);
+  margin-top: 22px;
+}
+
+@media (max-width: 768px) {
+  .process-flow {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .process-line {
+    width: 1px;
+    height: 24px;
+    margin: 0.5rem 0;
+  }
+}
+
+.section-watercolor {
+  position: relative;
+  background-image: url("images/watercolor-paint.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 6rem 0;
+}
+
+/* Farbliche Beruhigung */
+.section-watercolor .overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.85)),
+    rgba(110, 140, 140, 0.15);
 }
