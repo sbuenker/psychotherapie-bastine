@@ -1,0 +1,81 @@
+# OS generated files #
+######################
+.DS_Store
+Thumbs.db
+
+# IDEs and editors #
+####################
+.vscode/
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Node.js #
+############
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+# Python #
+############
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.egg
+venv/
+env/
+.Python
+
+# Java #
+#########
+*.class
+*.jar
+*.war
+*.ear
+*.classpath
+*.project
+*.settings/
+target/
+
+# Ruby #
+########
+*.gem
+*.rbc
+.bundle/
+vendor/bundle/
+
+# Go #
+######
+bin/
+*.exe
+*.test
+*.out
+
+# Logs and databases #
+######################
+*.log
+*.sql
+*.sqlite
+*.sqlite3
+
+# Build / dependency directories #
+##################################
+build/
+dist/
+tmp/
+temp/
+.cache/
+.coverage
+
+# Misc #
+########
+*.swp
+*.lock
+.idea/
+*.iml
+*.log
